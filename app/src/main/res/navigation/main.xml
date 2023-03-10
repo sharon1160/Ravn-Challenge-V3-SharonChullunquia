@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/peopleFragment">
+
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.starwars.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" >
+        <action
+            android:id="@+id/action_peopleFragment_to_peopleDetailFragment2"
+            app:destination="@id/peopleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleDetailFragment"
+        android:name="com.example.starwars.PeopleDetailFragment"
+        android:label="fragment_people_detail"
+        tools:layout="@layout/fragment_people_detail" />
+</navigation>
