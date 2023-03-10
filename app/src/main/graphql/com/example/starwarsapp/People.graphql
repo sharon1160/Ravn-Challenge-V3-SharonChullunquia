@@ -1,0 +1,23 @@
+# Write your query or mutation here
+query People {
+    allPeople {
+        people {
+            name
+            species {
+                name
+            }
+            homeworld {
+                name
+            }
+            eyeColor
+            hairColor
+            skinColor
+            birthYear
+            vehicleConnection {
+                vehicles {
+                    name
+                }
+            }
+        }
+    }
+}
