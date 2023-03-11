@@ -1,0 +1,46 @@
+# Write your query or mutation here
+query People {
+    allPeople {
+        people {
+            id
+            name
+            species {
+                name
+            }
+            homeworld {
+                name
+            }
+            eyeColor
+            hairColor
+            skinColor
+            birthYear
+            vehicleConnection {
+                vehicles {
+                    name
+                }
+            }
+        }
+    }
+}
+
+query GetPerson ($id: ID){
+    person (id: $id) {
+        id
+        name
+        species {
+            name
+        }
+        homeworld {
+            name
+        }
+        eyeColor
+        hairColor
+        skinColor
+        birthYear
+        vehicleConnection {
+            vehicles {
+                name
+            }
+        }
+    }
+}

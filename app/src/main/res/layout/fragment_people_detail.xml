@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PeopleDetailFragment">
+
+    <TextView
+        android:id="@+id/general_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General Information"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="9pt"
+        android:textColor="#333333"
+        android:textStyle="bold">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/eye_color_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eye Color"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="9pt"
+        android:textColor="#828282"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/eye_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="90dp"
+        android:gravity="right"
+        android:layout_marginRight="16dp"
+        android:textSize="9pt"
+        android:textColor="#333333"
+        android:textStyle="bold">
+    </TextView>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="130dp"
+        android:background="#1A000000"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/hair_color_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hair Color"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="9pt"
+        android:textColor="#828282"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/hair_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="140dp"
+        android:gravity="right"
+        android:layout_marginRight="16dp"
+        android:textSize="9pt"
+        android:textColor="#333333"
+        android:textStyle="bold">
+    </TextView>
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="180dp"
+        android:background="#1A000000"
+        android:visibility="visible" />
+
+
+
+    <TextView
+        android:id="@+id/skin_color_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skin Color"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="9pt"
+        android:textColor="#828282"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/skin_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="190dp"
+        android:gravity="right"
+        android:layout_marginRight="16dp"
+        android:textSize="9pt"
+        android:textColor="#333333"
+        android:textStyle="bold">
+    </TextView>
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="230dp"
+        android:background="#1A000000"
+        android:visibility="visible" />
+
+
+
+    <TextView
+        android:id="@+id/birth_year_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Birth Year"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="9pt"
+        android:textColor="#828282"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/birth_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="240dp"
+        android:gravity="right"
+        android:layout_marginRight="16dp"
+        android:textSize="9pt"
+        android:textColor="#333333"
+        android:textStyle="bold">
+    </TextView>
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="280dp"
+        android:background="#1A000000"
+        android:visibility="visible" />
+
+
+</FrameLayout>
