@@ -12,11 +12,17 @@
         tools:layout="@layout/fragment_people" >
         <action
             android:id="@+id/action_peopleFragment_to_peopleDetailFragment2"
-            app:destination="@id/peopleDetailFragment" />
+            app:destination="@id/peopleDetailFragment" >
+            <argument
+                android:name="peopleId"
+                app:argType="string" />
+        </action>
     </fragment>
+
     <fragment
         android:id="@+id/peopleDetailFragment"
         android:name="com.example.starwars.PeopleDetailFragment"
         android:label="fragment_people_detail"
-        tools:layout="@layout/fragment_people_detail" />
+        tools:layout="@layout/fragment_people_detail">
+    </fragment>
 </navigation>
