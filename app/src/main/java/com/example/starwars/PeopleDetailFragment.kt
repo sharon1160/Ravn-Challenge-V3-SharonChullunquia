@@ -23,7 +23,6 @@ class PeopleDetailFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
             peopleId = it.getString("peopleId").toString()
-            Log.d("AAAA",peopleId)
         }
     }
 
@@ -40,8 +39,7 @@ class PeopleDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         lifecycleScope.launch {
-            val response = apolloClient.query(GetPersonQuery(Optional.present(peopleId))).execute().also {
-                Log.d("PeopleList",it.data.toString())}
+            val response = apolloClient.query(GetPersonQuery(Optional.present(peopleId))).execute().also {}
             val peopleList = response?.data?.person
             if (peopleList != null && !response.hasErrors()) {
                 binding.eyeColor.text = peopleList.eyeColor

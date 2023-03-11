@@ -30,16 +30,8 @@ class PeopleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*binding.btn1.setOnClickListener {
-            findNavController().navigate(R.id.action_peopleFragment_to_peopleDetailFragment2)
-        }
-        Log.d("PeopleList", "Exit")*/
-
         lifecycleScope.launch {
-            Log.d("PeopleList", "Exit2")
-            val response = apolloClient.query(PeopleQuery()).execute().also {
-                    Log.d("PeopleList",it.data.toString())}
-            Log.d("PeopleList", "Exit333")
+            val response = apolloClient.query(PeopleQuery()).execute().also {}
             val peopleList = response?.data?.allPeople
             if (peopleList != null && !response.hasErrors()) {
                 val adapter = Adapter(peopleList)
