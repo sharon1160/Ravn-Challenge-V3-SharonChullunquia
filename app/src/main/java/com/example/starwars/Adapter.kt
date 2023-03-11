@@ -1,6 +1,5 @@
 package com.example.starwars
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -22,17 +21,21 @@ class Adapter(
         return ViewHolder(binding)
     }
 
-
+    var onItemClicked: ((PeopleQuery.Person) -> Unit)? = null
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         peopleList.people?.let{
             val peopleQuery = it[position]
-            holder.binding.name.text = peopleQuery?.name ?: "No data"
-            val specieName = peopleQuery?.species?.name ?: "No data"
-            val homeworldName = peopleQuery?.homeworld?.name ?: "No data"
+            peopleQuery?.let {
+                holder.binding.name.text = peopleQuery.name ?: "No data"
+                val specieName = peopleQuery.species?.name ?: "Human"
+                val homeworldName = peopleQuery.homeworld?.name ?: "No data"
+                holder.binding.resume.text = "$specieName from $homeworldName"
 
-            holder.binding.resume.text = "$specieName from $homeworldName"
-
+                holder.binding.root.setOnClickListener {
+                    onItemClicked?.invoke(peopleQuery)
+                }
+            }
 
         }
     }
