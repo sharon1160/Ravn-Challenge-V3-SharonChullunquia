@@ -43,10 +43,16 @@ class PeopleFragment : Fragment() {
             val peopleList = response?.data?.allPeople
             if (peopleList != null && !response.hasErrors()) {
                 val adapter = Adapter(peopleList)
+
+                adapter.onItemClicked = { people ->
+                    findNavController().navigate(
+                    PeopleFragmentDirections.actionPeopleFragmentToPeopleDetailFragment2(people.id))}
                 binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
                 binding.recyclerView.adapter = adapter
             }
         }
+
+
     }
 
 
